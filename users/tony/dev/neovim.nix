@@ -16,7 +16,6 @@
   };
   xdg.configFile."nvim" = {
     source = config.lib.file.mkOutOfStoreSymlink ../dot/nvim;
-    recursive = true;
   };
   home.packages = with pkgs;
     [

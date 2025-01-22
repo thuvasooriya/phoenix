@@ -46,6 +46,10 @@ sudo ./naive install
 
 ## focus
 
+- [ ] tested in
+    - [x] macbook m3 pro
+    - [x] orbstack nixos - awesome multiarch with rosetta
+    - [x] parallels vm - ! no rosetta yet
 - [ ] rosetta in parallels
 - [ ] devenv for rocket-chip
 - [ ] fix github auth for commits on linux
