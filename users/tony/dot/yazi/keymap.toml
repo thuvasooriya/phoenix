@@ -1,0 +1,33 @@
+[[manager.prepend_keymap]]
+on   = "f"
+run  = "plugin jump-to-char"
+desc = "jump to char"
+
+[[manager.prepend_keymap]]
+on = ["C"]
+run = "plugin ouch --args=zip"
+desc = "compress with ouch"
+
+[[manager.prepend_keymap]]
+on  = [ "g", "p" ]
+run = 'cd $HOME/.phoenix/'
+
+[[manager.prepend_keymap]]
+on  = [ "g", "n" ]
+run = 'cd $HOME/arc/now/'
+
+[[manager.prepend_keymap]]
+on  = "y"
+run = [ '''
+	shell 'open -a Yoink "$@"' --confirm
+''', "yank" ]
+
+[[manager.prepend_keymap]]
+desc = "maximize or restore the preview pane"
+on = "T"
+run = "plugin --sync max-preview"
+
+[[manager.prepend_keymap]]
+desc = "chmod on selected files"
+on = ["c", "m"]
+run = "plugin chmod"

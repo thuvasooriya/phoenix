@@ -1,0 +1,41 @@
+[log]
+# enabled = false
+
+[manager]
+# ratio = [2, 3, 3]
+show_hidden = true
+sort_by = "natural"
+sort_dir_first = true
+
+# [[plugin.prepend_fetchers]]
+# id   = "mime"
+# if   = "!mime"
+# name = "*"
+# run  = "mime-ext"
+# prio = "high"
+
+[plugin]
+prepend_previewers = [
+  {mime = "application/*zip", run = "ouch"},
+  {mime = "application/x-tar", run = "ouch"},
+  {mime = "application/x-rar", run = "ouch"},
+  {mime = "application/x-xz", run = "ouch"},
+  {mime = "application/x-7z-compressed", run = "ouch"},
+  # {name = "*.csv", run = "rich-preview"},
+  # {name = "*.rst", run = "rich-preview"},
+  # {name = "*.ipynb", run = "rich-preview"},
+  # {name = "*.json", run = "rich-preview"},
+  # {name = "*.md", run = "glow"},
+  # {mime = "text/csv", run = "miller"},
+]
+
+[open]
+prepend_rules = [
+	{ mime = "text/*", use = "edit" },
+	{ mime = "video/*", use = ["open", "reveal"] },
+	{ mime = "audio/*", use = ["open", "reveal"] },
+	# { mime = "application/pdf", use = "open" },
+	# { mime = "application/json", use = "edit" },
+	# { name = "*.json", use = "edit" },
+	# { name = "*.html", use = [ "open", "edit" ] }
+]

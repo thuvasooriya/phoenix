@@ -1,0 +1,113 @@
+palette = 0=#45475a
+palette = 1=#f38ba8
+palette = 2=#a6e3a1
+palette = 3=#f9e2af
+palette = 4=#89b4fa
+palette = 5=#f5c2e7
+palette = 6=#94e2d5
+palette = 7=#bac2de
+palette = 8=#585b70
+palette = 9=#f38ba8
+palette = 10=#a6e3a1
+palette = 11=#f9e2af
+palette = 12=#89b4fa
+palette = 13=#f5c2e7
+palette = 14=#94e2d5
+palette = 15=#a6adc8
+background = 11111b
+foreground = cdd6f4
+cursor-color = f5e0dc
+selection-background = 353749
+selection-foreground = cdd6f4
+# custom-shader = ./mnoise.glsl
+# custom-shader-animation = always
+macos-titlebar-style = hidden
+confirm-close-surface = false
+quick-terminal-animation-duration = 0
+
+# window-padding-balance = true
+# window-padding-x = 1
+# window-padding-y = 1
+# window-step-resize = true
+# window-height=18
+# window-width=72
+# unfocused-split-opacity = 0.95
+# background-blur-radius=10
+# background-opacity=0.97
+# font-thicken = true
+# font-size = 12
+# macos-titlebar-style = transparent
+# macos-non-native-fullscreen = true
+# macos-option-as-alt = true
+# clipboard-read = "allow"
+# copy-on-select = clipboard
+# clipboard-paste-protection = true
+# clipboard-trim-trailing-spaces = true
+
+# cursor-style-blink = false
+# cursor-style = block
+# mouse-hide-while-typing = true
+# cursor-click-to-move = true
+# mouse-shift-capture = true
+# shell-integration = detect
+# working-directory = home
+
+# quick-terminal-screen = mouse
+
+
+keybind = super+k=scroll_page_up
+keybind = super+page_up=unbind
+keybind = super+shift+up=jump_to_prompt:-1
+keybind = super+shift+down=jump_to_prompt:1
+keybind = super+physical:one=goto_tab:1
+keybind = super+physical:two=goto_tab:2
+keybind = super+physical:three=goto_tab:3
+keybind = super+physical:four=goto_tab:4
+keybind = super+physical:five=goto_tab:5
+keybind = super+physical:six=goto_tab:6
+keybind = super+physical:seven=goto_tab:7
+keybind = super+physical:eight=goto_tab:8
+keybind = super+physical:nine=goto_tab:9
+keybind = super+comma=open_config
+keybind = super+shift+comma=reload_config
+keybind = super+minus=decrease_font_size:1
+keybind = super+a=select_all
+keybind = super+w=close_surface
+keybind = super+shift+w=close_window
+keybind = super+shift+left_bracket=previous_tab
+keybind = super+shift+enter=toggle_split_zoom
+keybind = ctrl+super+j=goto_split:bottom
+keybind = alt+shift+equal=equalize_splits
+keybind = ctrl+super+l=goto_split:right
+keybind = super+ctrl+right=resize_split:right,10
+keybind = super+n=new_window
+keybind = global:alt+enter=toggle_quick_terminal
+keybind = super+alt+i=inspector:toggle
+keybind = super+ctrl+f=toggle_fullscreen
+keybind = ctrl+super+h=goto_split:left
+keybind = super+j=scroll_page_down
+keybind = super+page_down=unbind
+keybind = super+alt+shift+w=close_all_windows
+keybind = ctrl+super+k=goto_split:top
+keybind = super+t=new_tab
+keybind = super+c=copy_to_clipboard
+keybind = super+shift+right_bracket=next_tab
+keybind = super+left_bracket=goto_split:previous
+keybind = super+equal=increase_font_size:1
+keybind = super+end=scroll_to_bottom
+keybind = super+right_bracket=goto_split:next
+keybind = super+slash=unbind
+keybind = super+d=new_split:right
+keybind = super+q=quit
+keybind = super+plus=increase_font_size:1
+keybind = super+zero=reset_font_size
+keybind = super+home=scroll_to_top
+keybind = super+ctrl+d=new_split:down
+keybind = alt+ctrl+d=ignore
+keybind = super+shift+d=unbind
+keybind = super+alt+j=resize_split:down,50
+keybind = super+ctrl+left=resize_split:left,10
+keybind = super+k=clear_screen
+keybind = super+alt+k=resize_split:up,50
+keybind = super+v=paste_from_clipboard
+keybind = super+shift+j=write_scrollback_file:open

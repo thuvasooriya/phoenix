@@ -1,0 +1,84 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // normal & visual mode
+      "space /": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+      // "J": ["workspace::SendKeystrokes", "5 j"],
+      // "K": ["workspace::SendKeystrokes", "5 k"]
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space g g": [
+        "workspace::SendKeystrokes",
+        ": new center terminal enter lazygit space enter"
+      ],
+      "space f f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space g g": [
+        "workspace::SendKeystrokes",
+        ": new center terminal enter lazygit space enter"
+      ],
+      "space f f": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // only in normal mode
+      "space g g": [
+        "workspace::SendKeystrokes",
+        ": new center terminal enter lazygit space && space exit enter"
+      ],
+      "space f f": "file_finder::Toggle",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // insert mode
+      // "j k": ["vim::SwitchMode", "Normal"],
+      "j k": ["workspace::SendKeystrokes", "escape"],
+      "j j": ["workspace::SendKeystrokes", "escape"]
+      // "j j": ["vim::SwitchMode", "Normal"]
+    }
+  },
+  // {
+  //   "context": "Pane",
+  //   "bindings": {
+  //     "ctrl-tab": "pane::ActivateNextItem",
+  //     "ctrl-shift-tab": "pane::ActivatePrevItem"
+  //   }
+  // },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+      // ... or other keybindings
+    }
+  }
+]

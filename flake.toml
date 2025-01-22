@@ -1,0 +1,28 @@
+[owner]
+name = "tony"
+
+[users.tony]
+fullName = "tony"
+email = "never@gonna"
+gitEmail = "74165167+thuvasooriya@users.noreply.github.com"
+authorizedKeys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBbmT9mYNpANgl85gI+lWvsSN4vx4oznBG2olaRsMalv",
+]
+# change this
+initialPassword = "123"
+
+[machines.macbook]
+platform = "aarch64-darwin"
+profile = "desktop"
+
+[machines.parallels]
+platform = "aarch64-linux"
+profile = "desktop"
+
+[machines.orb]
+platform = "aarch64-linux"
+profile = "orb"
+
+# [machines.raspberrypi]
+# platform = "aarch64-linux"
+# profile = "home-server"
