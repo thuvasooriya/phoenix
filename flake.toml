@@ -1,5 +1,7 @@
 [owner]
 name = "tony"
+configDir = ".phoenix"
+# location of your config relative to your home dir
 
 [users.tony]
 fullName = "tony"

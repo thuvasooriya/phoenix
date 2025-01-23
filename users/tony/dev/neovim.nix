@@ -4,6 +4,7 @@
   lib,
   isLinux,
   neovim-nightly,
+  owner,
   ...
 }: {
   programs.neovim = {
@@ -15,7 +16,8 @@
     defaultEditor = true;
   };
   xdg.configFile."nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink ../dot/nvim;
+    # source = config.lib.file.mkOutOfStoreSymlink ../dot/nvim;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/${owner.configDir}/users/tony/dot/nvim";
   };
   home.packages = with pkgs;
     [
@@ -26,15 +28,14 @@
       '')
       tree-sitter
 
-      # zls
       # clang-tools
       # rust-analyzer
 
       nil
       alejandra
 
-      # shfmt
-      # asmfmt
+      shfmt
+      asmfmt
 
       lua
       lua-language-server
@@ -42,7 +43,7 @@
 
       # prettierd
       # vscode-langservers-extracted
-      # biome
+      biome
 
       # tectonic
       # typst

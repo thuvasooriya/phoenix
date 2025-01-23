@@ -24,6 +24,7 @@
       ./app/yazi.nix
       ./app/zellij.nix
       ./app/ghostty.nix
+      # ./x11/vnc.nix
     ]
     ++ lib.optionals isDarwin [./darwin.nix]
     ++ lib.optionals isLinux [./linux.nix];

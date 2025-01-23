@@ -1,6 +1,5 @@
-set shell := ["nu", "-c"]
-
-router_ip := `netstat -nr | awk '$1=="default" && $NF=="en0" {print $2; exit}'`
+# set shell := ["nu", "-c"]
+# router_ip := `netstat -nr | awk '$1=="default" && $NF=="en0" {print $2; exit}'`
 
 @default:
     # just --choose
@@ -17,17 +16,17 @@ router_ip := `netstat -nr | awk '$1=="default" && $NF=="en0" {print $2; exit}'`
     python3 ~/.config/aria2/aria2.py
 
 # mirror android device
-scrcpy mode='d':
-    adb kill-server
-    if {{ mode }} == "e" { adb tcpip 5555 } else { }
-    if {{ mode }} == "e" { adb connect {{ router_ip }}:5555 } else { }
-    adb devices
+# scrcpy mode='d':
+#     adb kill-server
+#     if {{ mode }} == "e" { adb tcpip 5555 } else { }
+#     if {{ mode }} == "e" { adb connect {{ router_ip }}:5555 } else { }
+#     adb devices
 
 mirror mode='d':
     scrcpy --video-codec=h265 --max-fps=30 --no-audio --no-mouse-hover --render-driver metal -{{ mode }}
 
-@test:
-    echo {{ router_ip }}
+# @test:
+#     echo {{ router_ip }}
 
 androdio:
     scrcpy --no-window --audio-buffer=200
@@ -35,6 +34,4 @@ androdio:
 binup:
     bun upgrade
     pixi self-update
-    zvm upgrade
-    zvm i --zls master
     rustup update

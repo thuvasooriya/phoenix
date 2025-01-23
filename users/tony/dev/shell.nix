@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  owner,
+  ...
+}: {
   programs = {
     starship = {
       enable = true;
@@ -22,7 +27,21 @@
       enableNushellIntegration = true;
       enableFishIntegration = true;
     };
+    atuin = {
+      enable = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+      enableFishIntegration = true;
+      enableBashIntegration = true;
+      settings = {
+        auto_sync = true;
+        workspaces = true;
+        # sync_frequency = "5m";
+        # sync_address = "https://api.atuin.sh";
+      };
+    };
   };
+  home.packages = with pkgs; [just];
   home.shellAliases = {
     urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
     urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
@@ -43,4 +62,7 @@
     "$HOME/.cargo/bin"
     "$HOME/.pixi/bin"
   ];
+  home.file = {
+    ".justfile".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/${owner.configDir}/users/tony/dot/.justfile";
+  };
 }

@@ -4,7 +4,7 @@
     settings = pkgs.lib.importTOML ../../users/tony/dot/aerospace.toml;
   };
   services.jankyborders = {
-    enable = true;
+    enable = false;
     style = "round";
     width = 2.0;
     hidpi = false;

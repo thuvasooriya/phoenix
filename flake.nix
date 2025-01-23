@@ -57,6 +57,7 @@
         metadata.users.${metadata.owner.name}
         // {
           name = getUserName metadata.owner.name host;
+          configDir = metadata.owner.configDir;
         };
       # TODO: what is this
       nur-pkgs = import nur-packages {pkgs = import nixpkgs {system = host.platform;};};
@@ -73,6 +74,7 @@
         useUserPackages = true;
         useGlobalPkgs = true;
         extraSpecialArgs = setSpecialArgs host;
+        backupFileExtension = "backup";
         users =
           lib.mapAttrs' (
             name: _: lib.nameValuePair (getUserName name host) (./users + "/${name}" + /home.nix)

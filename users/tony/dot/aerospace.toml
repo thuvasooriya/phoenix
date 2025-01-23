@@ -13,7 +13,7 @@ default-root-container-orientation = 'auto'
 # automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
-if.app-name-regex-substring = "telegram|discord|zoom workplace|finder|monkeytype|spotube|activity monitor|ria|movist pro|dota 2|steam|whatsapp|brain.fm|calendar|orbstack|python|xquartz|keka"
+if.app-name-regex-substring = "telegram|discord|zoom workplace|finder|monkeytype|spotube|activity monitor|ria|movist pro|dota 2|steam|whatsapp|brain.fm|calendar|orbstack|python|xquartz|keka|timer"
 run = 'layout floating'
 
 [[on-window-detected]]

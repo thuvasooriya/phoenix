@@ -18,7 +18,7 @@ return {
       numbers = {},
       booleans = { "bold" },
       properties = {},
-      types = { "underline" },
+      types = { "italic" },
       operators = {},
       -- miscs = {}, -- uncomment to turn off hard-coded styles
     },

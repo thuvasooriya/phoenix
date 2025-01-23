@@ -25,7 +25,10 @@
       ./gui/sway.nix
     ]
     ++ lib.optionals isOrb [
+      # ./x11/vnc.nix
       ./sys/orb.nix
+      ./xfce/xfce.nix
+      ./net/xrdp.nix
     ]
     ++ lib.optionals (!isOrb) [
       ./net/ssh.nix
@@ -80,14 +83,15 @@
     # some archiver tools.
     unzip
     zip
-    ghostty.terminfo
+    # ghostty.terminfo
   ];
 
   # TODO: ghostty fiasco
-  environment.enableAllTerminfo = true;
-  environment.sessionVariables = {
-    TERMINFO_DIRS = "/run/current-system/sw/share/terminfo";
-  };
+  # use this in orbstack: mac infocmp -x | tic -x -
+  # environment.enableAllTerminfo = true;
+  # environment.sessionVariables = {
+  #   TERMINFO_DIRS = "/run/current-system/sw/share/terminfo";
+  # };
 
   # remove packages.
   documentation.nixos.enable =

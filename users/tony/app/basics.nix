@@ -4,6 +4,7 @@
       nodejs
       python312
       zigpkgs."0.13.0"
+      zls
     ];
   };
 }
